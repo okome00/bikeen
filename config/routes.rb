@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :post_comments, only: [:create, :destroy]               ## PostCommentルーディング
     resource  :favorites,     only: [:create, :destroy]               ## Favoriteルーディング
     collection do
-      get    '/posts/search'       => 'posts#search', as: 'search'        ## searchページルーディング
+      get    '/posts/search'   => 'posts#search', as: 'search'        ## searchページルーディング
     end
   end
   resources :users, only: [:show, :edit, :update] do                  ## Userルーディング
