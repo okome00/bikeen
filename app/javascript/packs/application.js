@@ -15,13 +15,6 @@ import "popper.js";
 import "bootstrap";
 import "../stylesheets/application.scss"
 
-// jQuery導入
-//= require jquery
-//= require jquery_ujs
-
-require('jquery')
-require('slick')
-
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
