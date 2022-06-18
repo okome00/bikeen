@@ -14,7 +14,6 @@ import "jquery";
 import "popper.js";
 import "bootstrap";
 import "../stylesheets/application.scss"
-import '@fortawesome/fontawesome-free/js/all'
 
 // jQuery導入
 //= require jquery
