@@ -35,8 +35,8 @@
           <span><i class="fas fa-comments mr-1"></i><%= @post.post_comments.count %>　|　</span>
           <span>
             <% if @post.user == current_user %>
-              <%= link_to post_path(@post.id), method: :delete, data: { confirm: "本当に削除しますか?" }, class: "text-dark" do %>
-                <i class="fas fa-trash-can" style="color: red;"></i>
+              <%= link_to post_path(@post.id), method: :delete, data: { confirm: "本当に削除しますか?" }, class: "text-danger" do %>
+                <span><i class="fas fa-trash-can style="color: red;""></i></span><strong>削除</strong>
               <% end %>
             <% end %>
           </span>
@@ -51,7 +51,7 @@
             <span style="color: #808080;"><%= time_ago_in_words(post_comment.created_at) %>前</span>
             <% if post_comment.user == current_user %>
               <%= link_to post_post_comment_path(post_comment.post, post_comment), method: :delete, class: "text-danger" do %>
-                <i class="fas fa-trash-can ml-3" style="color: red;"></i>
+                <i class="fas fa-trash-can ml-3" style="color: red;"></i><strong>削除</strong>
               <% end %>
             <% end %>
             <p class="mt-2 ml-2"><%= post_comment.content %></p>
